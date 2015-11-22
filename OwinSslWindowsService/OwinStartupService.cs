@@ -16,7 +16,6 @@ namespace OwinSslWindowsService
         public OwinStartupService()
         {
             InitializeComponent();
-
         }
 
         /// <summary>
@@ -26,7 +25,6 @@ namespace OwinSslWindowsService
         protected override void OnStart(string[] args)
         {
             string baseAddress = "http://localhost:8099/";
-            
             server = WebApp.Start<OwinStartup>(baseAddress);
         }
 
@@ -36,7 +34,6 @@ namespace OwinSslWindowsService
         protected override void OnStop()
         {
             server?.Dispose();
-            Stop();
         }
     }
 }
