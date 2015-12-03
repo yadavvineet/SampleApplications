@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.ServiceProcess;
 using Microsoft.Owin.Hosting;
 
@@ -9,6 +10,7 @@ namespace OwinSslWindowsService
     /// </summary>
     public partial class OwinStartupService : ServiceBase
     {
+        private const string serverNameKey = "serverHostName";
         private IDisposable server;
         /// <summary>
         /// Constructor
@@ -24,7 +26,7 @@ namespace OwinSslWindowsService
         /// <param name="args"></param>
         protected override void OnStart(string[] args)
         {
-            string baseAddress = "http://localhost:8099/";
+            string baseAddress = ConfigurationManager.AppSettings[serverNameKey];
             server = WebApp.Start<OwinStartup>(baseAddress);
         }
 
