@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="~/lib/bootswatch/cosmo/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-theme.css"></link>
+</head>
+<body class="container-fluid">
+
+    <nav class="nav navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <button class="btn btn-primary">Standard</button>
+                </li>
+            </ul>
+            <a asp-controller="App" asp-action="Index" class="navbar-brand">The SSite Name</a>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" class="btn btn-sm btn-info">
+                        <i class="fa fa-save"></i> Save
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-sm btn-info">
+                        <i class="fa fa-save"></i> Print
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <div id="footer" class="container-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+            <p class="text-center text-info">&copy; Vineet Yadav 2015</p>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/js/bootstrap.min.js"></link>
+    @RenderSection("scripts", false)
+</body>
+</html>

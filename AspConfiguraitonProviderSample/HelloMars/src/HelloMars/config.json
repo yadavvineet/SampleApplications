@@ -1,0 +1,15 @@
+﻿{
+    "AppSetting": {
+        "MailSettings": {
+            "AdminMailId": "admin@vineetyadav.com",
+            "InfoMailId": "info@vineetyadav.com",
+            "SmtpServer": "smtp.vineetyadav.com",
+            "SmtpKey": "nvf32f42csafce3-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        "ServiceEndpoints": {
+            "AzureAuthEndpoint": "vineetyadav023.cloudservices.net",
+            "AuthServiceEndpotin": "http://local.vineetyadav.com/oauth2",
+            "TokenProvider": "http://local.vineetyadav.com/token"
+        }
+    }
+}
